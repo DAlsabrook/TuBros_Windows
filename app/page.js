@@ -5,8 +5,12 @@ export default function Home() {
     <main className={styles.main}>
       <header className={styles.header}>
         <div className={styles.content}>
-          <p>hello</p>
-
+          <p>Text</p>
+          <a>Link</a><br/>
+          <button>Button</button>
+          <h1>h1</h1>
+          <h2>h2</h2>
+          <h3>h3</h3>
         </div>
       </header>
       <section>
