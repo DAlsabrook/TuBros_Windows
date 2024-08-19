@@ -1,0 +1,31 @@
+.main {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  max-width: 768px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+.header {
+  height: 50px;
+  border-bottom: 1px solid var(--gold) !important;
+  position: sticky;
+  top: 0;
+}
+
+/* Tablet */
+@media (min-width: 701px) {
+
+}
+
+/* laptop Desktop */
+@media (min-width: 992px) {
+
+}

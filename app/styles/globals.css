@@ -1,0 +1,41 @@
+:root {
+  --grey-1: rgba(17, 17, 17);
+  --grey-2: rgba(18, 18, 18, 0.966);
+  --grey-3: rgba(19, 19, 19, 0.963);
+  --grey-4: rgb(20, 20, 20);
+  --grey-5: rgb(21, 21, 21);
+  --gold: rgb(159, 147, 80);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(
+    -45deg, /* 45 degrees for diagonal stripes */
+    var(--grey-1) 0%,
+    var(--grey-1) 20%,
+    var(--grey-2) 20%,
+    var(--grey-2) 40%,
+    var(--grey-3) 40%,
+    var(--grey-3) 60%,
+    var(--grey-4) 60%,
+    var(--grey-4) 80%,
+    var(--grey-5) 80%,
+    var(--grey-5) 100%);
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
