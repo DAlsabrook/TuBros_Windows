@@ -26,6 +26,7 @@ export default function Home() {
             <h1 className={styles.heroTitle}>TuBros Windows</h1>
             <Image src="/full_scrollwork.png" alt="scrollwork design" className={styles.hero_scrollwork} width={400} height={75} />
             <p>Glass so clean, it can&apos;t be seen!</p>
+            <p>Free Estimates - Safe Chemicals - Quick Service</p>
             <button>Call Now</button>
           </div>
         </div>
