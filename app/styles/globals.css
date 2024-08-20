@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+
 :root {
-  --grey-1: rgba(17, 17, 17);
-  --grey-2: rgba(18, 18, 18);
-  --grey-3: rgba(19, 19, 19);
-  --grey-4: rgb(20, 20, 20);
-  --grey-5: rgb(21, 21, 21);
+  --grey: rgb(21, 21, 21);
+  /* --grey: rgb(20, 17, 0); */
   --gold: rgb(228, 215, 139);
 }
+
 
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
+  font-family: 'Baskervville SC', serif;
+  font-weight: 200;
 }
 
 html {
@@ -38,18 +40,7 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  background: linear-gradient(
-    -45deg, /* 45 degrees for diagonal stripes */
-    var(--grey-1) 0%,
-    var(--grey-1) 20%,
-    var(--grey-2) 20%,
-    var(--grey-2) 40%,
-    var(--grey-3) 40%,
-    var(--grey-3) 60%,
-    var(--grey-4) 60%,
-    var(--grey-4) 80%,
-    var(--grey-5) 80%,
-    var(--grey-5) 100%);
+  background-color: var(--grey);
   color: white;
 }
 
@@ -88,7 +79,7 @@ button::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--grey-1);
+  background: var(--grey);
   /* Shiny gold gradient */
   border-radius: inherit;
   z-index: -1;

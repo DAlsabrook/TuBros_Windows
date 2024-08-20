@@ -33,15 +33,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
   width: 100%;
   max-width: 1440px;
   height: 100%;
   padding: 0;
-  margin: 0;
+  /* margin: 0; */
 }
 
 .header {
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,20 +69,77 @@
   height: 100%;
 }
 
+.TBicon {
+  outline: none;
+  margin: 0;
+  padding: 10px;
+  border: 2px solid transparent;
+  background: linear-gradient(to bottom right, var(--gold), white, var(--gold));
+  color: white;
+  overflow: visible;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.TBicon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--grey);
+  /* Shiny gold gradient */
+  border-radius: inherit;
+  z-index: -1;
+  /* Adjust padding to create the border effect */
+  box-sizing: border-box;
+}
+
 .navItems {
-  width: 300px;
+  width: 350px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-size: 1.2rem;
 }
 
+.navItems a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 5px;
+}
+
+.navItems a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: var(--gold);
+  /* Adjust the color as needed */
+  transition: width 0.4s ease, right 0.4s ease;
+}
+
+.navItems a:hover::after {
+  width: 100%;
+  right: 0;
+}
 
 /* Hero section */
 .heroSection {
   width: 100%;
-  background-image: url('/city_placeholder.jpg');
+  height: 100vh;
+  background-color: black;
+  background-image: url('/skyline_background.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: fill;
+  background-position: bottom -10px left -10px;
 }
 
 .heroContent {
@@ -90,6 +148,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
+}
+
+
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 0;
+  color: var(--gold);
+}
+
+.hero_scrollwork {
+  width: 100%;
+  max-width: 450px;
 }
 
 
@@ -100,26 +172,87 @@
 
 .storyContent {
   width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  height: 90%;
+}
+
+/* div for all text in section */
+.storyText{
+  width: 100%;
+  text-align: center;
+}
+
+.storyScrollDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  width: 12px;
+}
+
+.storyScrollwork {
+  width: 20rem;
+  margin: 0;
+  padding: 0;
+}
+
+.storyImg {
+  width: 100%;
+  border-radius: 50px;
 }
 
 
 /* Works section */
 .worksSection {
   width: 100%;
+  background-color: black;
 }
 
 .worksContent {
   width: 80%;
+  height: 80%;
+  border-radius: 30px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .worksText {
-  width: 50%;
+  width: 80%;
+  text-align: center;
 }
 
 .worksCarousel {
-  width: 50%;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.carouselImageWrapper {
+  position: relative;
+  text-align: center;
+}
+
+.carouselImage {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+}
+
+.carouselImage::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleY(-1);
+  opacity: 0.5;
 }
 
 
@@ -177,9 +310,39 @@
   height: 200px;
 }
 
+
+
+/* Responsive media queries */
 /* Tablet */
 @media (min-width: 701px) {
+/* Hero section */
+  .heroSection {
+    background-size: 80%;
+  }
 
+  /* Story section */
+  .storyContent {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  /* div for all text in section */
+  .storyText {
+    width: 45%;
+  }
+
+  .storyScrollDiv {
+    margin: auto;
+  }
+
+  .storyScrollwork {
+    rotate: 90deg;
+    width: 13rem;
+  }
+
+  .storyImg {
+    width: 45%;
+  }
 }
 
 /* laptop Desktop */

@@ -1,13 +1,15 @@
-import styles from "./styles/page.module.css";
+import styles from './styles/page.module.css';
+// import Carousel from './slider';
 
 export default function Home() {
+
   return (
     <main className={styles.main}>
       {/* Header */}
       <header className={styles.header}>
         <div className={styles.contentWrapper}>
           <div className={styles.headerContent}>
-            <p>TuBros Logo Img</p>
+            <a href="#top" className={styles.TBicon}>TB</a>
             <div className={styles.navItems}>
               <a href="#story">Our Story</a>
               <a href="#areas">Areas Served</a>
@@ -18,11 +20,12 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className={styles.heroSection}>
+      <section className={styles.heroSection} id="top">
         <div className={styles.contentWrapper}>
           <div className={styles.heroContent}>
-            <h1>TuBros Windows</h1>
-            <p>So clean, it will never be seen</p>
+            <h1 className={styles.heroTitle}>TuBros Windows</h1>
+            <img src="/full_scrollwork.png" alt="scrollwork desgin" className={styles.hero_scrollwork}></img>
+            <p>Glass so clean, it can't be seen!</p>
             <button>Call Now</button>
           </div>
         </div>
@@ -32,10 +35,16 @@ export default function Home() {
       <section className={styles.storySection} id="story">
         <div className={styles.contentWrapper}>
           <div className={styles.storyContent}>
-            <h2>Our Story</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <div className={styles.storyText}>
+              <h2>Our Story</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <div className={styles.storyScrollDiv}>
+              <img src="/single_bar_scrollwork.png" className={styles.storyScrollwork}></img>
+            </div>
+            <img src="/pittmans.jpg" alt="workers image" className={styles.storyImg}></img>
           </div>
         </div>
       </section>
@@ -45,14 +54,12 @@ export default function Home() {
         <div className={styles.contentWrapper}>
           <div className={styles.worksContent}>
             <div className={styles.worksText}>
-              <h2>Our Works</h2>
+              <h2>Our Work</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </div>
-            <div className={styles.worksCarousel}>
-              <p>Cool carousel</p>
-            </div>
+            {/* <Carousel/> */}
           </div>
         </div>
       </section>
