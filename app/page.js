@@ -4,13 +4,15 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <header className={styles.header}>
-        <div className={styles.content}>
-          <p>Text</p>
-          <a>Link</a><br/>
-          <button>Button</button>
-          <h1>h1</h1>
-          <h2>h2</h2>
-          <h3>h3</h3>
+        <div className={styles.contentWrapper}>
+          <div className={styles.headerContent}>
+            <p>TuBros Logo Img</p>
+            <div className={styles.navItems}>
+              <a href="#">Contact</a>
+              <a href="#">Areas Served</a>
+              <a href="#">Our Story</a>
+            </div>
+          </div>
         </div>
       </header>
       <section>

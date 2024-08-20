@@ -5,19 +5,45 @@
   margin: 0;
 }
 
-.content {
-  max-width: 768px;
+/* Content wrapper */
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
   height: 100%;
   padding: 0;
   margin: 0;
 }
 
-
 .header {
   height: 50px;
-  border-bottom: 1px solid var(--gold) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: sticky;
   top: 0;
+  background-color: rgba(134, 134, 134, 0.1);
+  /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  /* For Safari */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .4);
+  /* Optional: Add a subtle shadow */
+  z-index: 1000;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
 }
 
 /* Tablet */

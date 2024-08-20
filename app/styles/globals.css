@@ -13,7 +13,15 @@
   margin: 0;
 }
 
-html,
+html {
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   width: 100vw;
   height: 100%;
@@ -35,6 +43,8 @@ body {
   color: white;
 }
 
+
+/* Remove defaults for buttons and lists */
 a {
   color: inherit;
   text-decoration: none;
@@ -43,6 +53,10 @@ a {
 a:hover {
   color: var(--gold);
   cursor: pointer;
+}
+
+button {
+  outline: auto;
 }
 
 h2 {
