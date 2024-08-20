@@ -1,3 +1,25 @@
+.heroSection,
+.storySection,
+.worksSection,
+.areasSection,
+.contactSection,
+.reviewsSection {
+  height: 600px;
+}
+
+.heroContent,
+.storyContent,
+.worksContent,
+.areasContent,
+.contactContent,
+.reviewsContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .main {
   height: 100%;
   width: 100%;
@@ -23,7 +45,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
+  position: absolute;
+  width: 100%;
   top: 0;
   background-color: rgba(134, 134, 134, 0.1);
   /* Semi-transparent background */
@@ -41,9 +64,117 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  height: 100%;
+}
+
+.navItems {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+/* Hero section */
+.heroSection {
+  width: 100%;
+  background-image: url('/city_placeholder.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heroContent {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Story section */
+.storySection {
+  width: 100%;
+}
+
+.storyContent {
+  width: 80%;
+}
+
+
+/* Works section */
+.worksSection {
+  width: 100%;
+}
+
+.worksContent {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.worksText {
+  width: 50%;
+}
+
+.worksCarousel {
+  width: 50%;
+}
+
+
+/* Areas Served Section */
+.areasSection {
+  width: 100%;
+  position: relative;
+}
+.areasSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid red;
+  background-image: url('/tulsaMap.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+  /* Ensure the pseudo-element is behind the content */
+}
+
+.areasContent {
+  width: 80%;
+}
+
+
+/* Contact section */
+.contactSection {
+  width: 100%;
+}
+
+.contactContent {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+
+/* Reviews section */
+.reviewsSection {
+  width: 100%;
+}
+
+.reviewsContent {
+  width: 80%;
+}
+
+
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: black;
+  height: 200px;
 }
 
 /* Tablet */
