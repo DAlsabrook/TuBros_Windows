@@ -1,5 +1,5 @@
 import styles from './styles/page.module.css';
-// import Carousel from './slider';
+import Image from 'next/image';
 
 export default function Home() {
 
@@ -24,8 +24,8 @@ export default function Home() {
         <div className={styles.contentWrapper}>
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>TuBros Windows</h1>
-            <img src="/full_scrollwork.png" alt="scrollwork desgin" className={styles.hero_scrollwork}></img>
-            <p>Glass so clean, it can't be seen!</p>
+            <Image src="/full_scrollwork.png" alt="scrollwork design" className={styles.hero_scrollwork} width={400} height={75} />
+            <p>Glass so clean, it can&apos;t be seen!</p>
             <button>Call Now</button>
           </div>
         </div>
@@ -42,9 +42,9 @@ export default function Home() {
               </p>
             </div>
             <div className={styles.storyScrollDiv}>
-              <img src="/single_bar_scrollwork.png" className={styles.storyScrollwork}></img>
+              <Image src="/single_bar_scrollwork.png" alt="scrollwork design" className={styles.storyScrollwork} width={5} height={5} />
             </div>
-            <img src="/pittmans.jpg" alt="workers image" className={styles.storyImg}></img>
+            <Image src="/pittmans.jpg" alt="workers image" className={styles.storyImg} width={500} height={300} />
           </div>
         </div>
       </section>

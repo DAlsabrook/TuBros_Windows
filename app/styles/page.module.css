@@ -194,13 +194,15 @@
 }
 
 .storyScrollwork {
-  width: 20rem;
+  max-height: 20rem;
+  width: auto;
   margin: 0;
   padding: 0;
 }
 
 .storyImg {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 50px;
 }
 
@@ -341,7 +343,8 @@
   }
 
   .storyImg {
-    width: 45%;
+    max-width: 45%;
+    height: auto;
   }
 }
 
