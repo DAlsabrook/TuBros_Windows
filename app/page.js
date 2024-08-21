@@ -117,9 +117,12 @@ export default function Home() {
         <div className={styles.contentWrapper}>
           <div className={styles.reviewsContent}>
             <h2>Testimonials</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <div className={styles.reviewBox}>
+              <p className={styles.reviewBoxText}>
+                Daniel has been cleaning the windows at my business for years. We set up a monthly schedule, and I don’t have to worry about it anymore. Great service!
+              </p>
+              <h3 className={styles.reviewBoxName}>- David Alsabrook</h3>
+            </div>
           </div>
         </div>
       </section>

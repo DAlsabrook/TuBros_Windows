@@ -187,7 +187,7 @@
 }
 
 .storyImg {
-  width: 390px;
+  width: 340px;
   height: auto;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -208,14 +208,14 @@
 }
 
 .cutoutText {
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   font-weight: bold;
   color: black;
   background: url('/pittmans.jpg');
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  background-position: center -180px;
+  background-position: center -140px;
   background-size: cover;
   top: 0%;
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
@@ -322,7 +322,7 @@
   width: 50px;
   cursor: pointer;
   position: absolute;
-  top: 70%;
+  top: 75%;
   transform: translateY(-50%);
   z-index: 1;
   display: flex;
@@ -335,11 +335,11 @@
 }
 
 .arrow:first-of-type {
-  left: 20%;
+  left: 10%;
 }
 
 .arrow:last-of-type {
-  right: 20%;
+  right: 10%;
 }
 
 /* Guarantee section */
@@ -402,6 +402,82 @@
   width: 90%;
 }
 
+.reviewBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 390px;
+  border: 2px solid black;
+  padding: 15px;
+  position: relative;
+}
+
+.reviewBox::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  width: 70%;
+  height: 70%;
+  border-bottom: 1px solid var(--gold);
+  border-right: 1px solid var(--gold);
+  pointer-events: none;
+}
+
+.reviewBox::after {
+  content: '';
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 70%;
+  height: 70%;
+  border-top: 1px solid var(--gold);
+  border-left: 1px solid var(--gold);
+  pointer-events: none;
+}
+
+.reviewboxName {
+
+}
+
+.reviewBoxText {
+  position: relative;
+  padding: 20px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.reviewBoxText::before,
+.reviewBoxText::after {
+  content: '“';
+  /* Opening quote for ::before and closing quote for ::after */
+  font-size: 4rem;
+  /* Adjust the size as needed */
+  color: var(--gold);
+  /* Gold color for the quotation marks */
+  position: absolute;
+}
+
+.reviewBoxText::before {
+  top: -10px;
+  /* Adjust the position as needed */
+  left: -20px;
+  /* Adjust the position as needed */
+  content: '“';
+  /* Opening quote */
+}
+
+.reviewBoxText::after {
+  bottom: -10px;
+  /* Adjust the position as needed */
+  right: -20px;
+  /* Adjust the position as needed */
+  content: '”';
+  /* Closing quote */
+}
+
 
 /* Footer */
 .footer {
@@ -420,30 +496,14 @@
     background-size: 80%;
   }
 
-  /* Story section */
-  /* .storyContent {
-    justify-content: space-between;
-    flex-direction: row;
-  } */
-
-  /* div for all text in section */
-  /* .storyText {
-    width: 45%;
-  }
-
-  .storyScrollDiv {
-    margin: auto;
-  }
-
-  .storyScrollwork {
-    rotate: 90deg;
-   width: 13rem;
-  }
-
   .storyImg {
-    max-width: 45%;
-    height: auto;
-  } */
+    width: 390px;
+  }
+
+  .cutoutText {
+    font-size: 5.5rem;
+    background-position: center -180px;
+  }
 
   /* carousel */
   .carouselImage {
@@ -456,7 +516,7 @@
   }
 
   .arrow {
-    top: 45%;
+    top: 65%;
   }
 
   .arrow:first-of-type {
