@@ -1,12 +1,3 @@
-.heroSection,
-.storySection,
-.worksSection,
-.areasSection,
-.contactSection,
-.reviewsSection {
-  height: 600px;
-}
-
 .heroContent,
 .storyContent,
 .worksContent,
@@ -18,6 +9,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .main {
@@ -49,7 +42,7 @@
   position: absolute;
   width: 100%;
   top: 0;
-  background-color: rgba(134, 134, 134, 0.1);
+  background-color: rgba(134, 134, 134, 0.2);
   /* Semi-transparent background */
   backdrop-filter: blur(10px);
   /* Frosted glass effect */
@@ -74,7 +67,7 @@
   margin: 0;
   padding: 10px;
   border: 2px solid transparent;
-  background: linear-gradient(to bottom right, var(--gold), white, var(--gold));
+  background: linear-gradient(to bottom right, var(--gold), rgb(112, 107, 55), var(--gold));
   color: white;
   overflow: visible;
   cursor: pointer;
@@ -154,7 +147,7 @@
 
 
 .heroTitle {
-  font-size: 2.9rem;
+  font-size: 2.6rem;
   margin-bottom: 0;
   color: var(--gold);
 }
@@ -168,6 +161,9 @@
 /* Story section */
 .storySection {
   width: 100%;
+  padding: 0 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .storyContent {
@@ -176,7 +172,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
-  height: 90%;
 }
 
 /* div for all text in section */
@@ -210,53 +205,103 @@
 /* Works section */
 .worksSection {
   width: 100%;
+  height: auto;
+  padding-top: 40px;
   background-color: black;
 }
 
 .worksContent {
   width: 80%;
-  height: 80%;
+  height: auto;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
 }
 
 .worksText {
-  width: 80%;
+  width: 100%;
   text-align: center;
+  border-bottom: 3px solid var(--gold);
+  padding: 30px;
 }
 
-.worksCarousel {
-  width: 80%;
-  margin: 0 auto;
-  padding: 2rem 0;
+/* Carousel */
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.carouselInner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carouselItem {
+  min-width: calc(100% - 60px);
+  margin: 0 30px;
+  transition: transform 0.5s ease;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carouselImageWrapper {
   position: relative;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
 }
 
 .carouselImage {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  width: auto;
+  height: 200px;
+  max-width: 290px;
   display: block;
+  border-radius: 20px;
+  box-shadow: 0 14px 40px rgba(255, 255, 255, 0.3);
 }
 
-.carouselImage::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+.carouselImageReflection {
+  opacity: 0.1;
+  margin-top: -75px;
+  transform: scaleY(-1) scaleX(1.2) scaleY(.3) perspective(200px) rotateX(-20deg);
+}
+
+.arrow {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
   position: absolute;
-  top: 100%;
-  left: 0;
-  transform: scaleY(-1);
-  opacity: 0.5;
+  top: 70%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.arrow img {
+  height: 20px;
+}
+
+.arrow:first-of-type {
+  left: 20%;
+}
+
+.arrow:last-of-type {
+  right: 20%;
+}
 
 /* Areas Served Section */
 .areasSection {
@@ -346,9 +391,39 @@
     max-width: 45%;
     height: auto;
   }
+
+  /* carousel */
+  .carouselImage {
+    height: 300px;
+    max-width: 590px;
+  }
+
+  .carouselImageReflection {
+    margin-top: -110px;
+  }
+
+  .arrow {
+    top: 45%;
+  }
+
+  .arrow:first-of-type {
+    left: 3%;
+  }
+
+  .arrow:last-of-type {
+    right: 3%;
+  }
 }
 
 /* laptop Desktop */
 @media (min-width: 992px) {
 
+  /* carousel */
+  .arrow:first-of-type {
+    left: 10%;
+  }
+
+  .arrow:last-of-type {
+    right: 10%;
+  }
 }
