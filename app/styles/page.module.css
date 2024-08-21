@@ -144,10 +144,13 @@
   margin: auto;
 }
 
-
+/* Text under logo */
+.heroContent p {
+  font-size: .8rem;
+}
 
 .heroTitle {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   margin-bottom: 0;
   color: var(--gold);
 }
@@ -221,7 +224,7 @@
 .worksText {
   width: 100%;
   text-align: center;
-  border-bottom: 3px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
   padding: 30px;
 }
 
