@@ -17,6 +17,7 @@ export default function Home() {
               <a href="#story">Our Story</a>
               <a href="#areas">Areas Served</a>
               <a href="#contact">Contact</a>
+              <a href="#contact">Get your free estimate</a>
             </div>
           </div>
         </div>
@@ -26,8 +27,10 @@ export default function Home() {
       <section className={styles.heroSection} id="top">
         <div className={styles.contentWrapper}>
           <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>TuBros Windows</h1>
-            <Image src="/full_scrollwork.png" alt="scrollwork design" className={styles.hero_scrollwork} width={400} height={75} />
+            <div className={styles.heroLogo}>
+              <h1 className={styles.heroTitle}>TuBros Windows</h1>
+              <Image src="/full_scrollwork.png" alt="scrollwork design" className={styles.hero_scrollwork} width={400} height={75} />
+            </div>
             <p>Glass so clean, it can&apos;t be seen!</p>
             <p>Free Estimates - 35+ Years Experience - Quick Service</p>
             <button>Call Now</button>
@@ -39,16 +42,23 @@ export default function Home() {
       <section className={styles.storySection} id="story">
         <div className={styles.contentWrapper}>
           <div className={styles.storyContent}>
+            <div className={styles.imageContainer}>
+              <Image src="/pittmans.jpg" alt="workers image" className={styles.storyImg} width={500} height={300} />
+              <div className={styles.textCutout}>
+                <h2 className={styles.cutoutText}>Our Story</h2>
+              </div>
+            </div>
+
+            <div className={styles.storyScrollDiv}>
+              <Image src="/single_bar_scrollwork.png" alt="scrollwork design" className={styles.storyScrollwork} width={5} height={5} />
+            </div>
             <div className={styles.storyText}>
-              <h2>Our Story</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </div>
-            <div className={styles.storyScrollDiv}>
-              <Image src="/single_bar_scrollwork.png" alt="scrollwork design" className={styles.storyScrollwork} width={5} height={5} />
-            </div>
-            <Image src="/pittmans.jpg" alt="workers image" className={styles.storyImg} width={500} height={300} />
+
+
           </div>
         </div>
       </section>
@@ -65,6 +75,19 @@ export default function Home() {
             </div>
             {/* <Carousel/> */}
             <SimpleCarousel />
+          </div>
+        </div>
+      </section>
+
+      {/* Guarantee section */}
+      <section className={styles.guaranteeSection}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.guaranteeContent}>
+            <Image src="/img-home-guarantee.png" alt="guarantee bannar" className={styles.guaranteeImg} width={300} height={300} />
+            <div className={styles.guaranteeText}>
+              <h2>A Clean Guarantee</h2>
+              <p>We will do it right the first time and we promise that if you are not completely satisfied, we&apos;ll make it right.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -93,7 +116,7 @@ export default function Home() {
       <section className={styles.reviewsSection}>
         <div className={styles.contentWrapper}>
           <div className={styles.reviewsContent}>
-            <h2>Reviews</h2>
+            <h2>Testimonials</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>

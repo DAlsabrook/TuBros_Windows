@@ -3,12 +3,14 @@
 .worksContent,
 .areasContent,
 .contactContent,
-.reviewsContent {
-  width: 100%;
+.reviewsContent,
+.guaranteeContent {
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -136,17 +138,17 @@
 }
 
 .heroContent {
-  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.heroLogo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;
-}
-
-/* Text under logo */
-.heroContent p {
-  font-size: .8rem;
 }
 
 .heroTitle {
@@ -160,6 +162,10 @@
   max-width: 450px;
 }
 
+/* Text under logo */
+.heroContent p {
+  font-size: .8rem;
+}
 
 /* Story section */
 .storySection {
@@ -170,17 +176,49 @@
 }
 
 .storyContent {
-  width: 90%;
+  flex-direction: column;
+}
+
+.imageContainer {
+  position: relative;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.storyImg {
+  width: 390px;
+  height: auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.textCutout {
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align:start;
+  background: var(--grey);
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column-reverse;
 }
 
-/* div for all text in section */
-.storyText{
-  width: 100%;
-  text-align: center;
+.cutoutText {
+  font-size: 5.5rem;
+  font-weight: bold;
+  color: black;
+  background: url('/pittmans.jpg');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-position: center -180px;
+  background-size: cover;
+  top: 0%;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
 }
 
 .storyScrollDiv {
@@ -198,11 +236,12 @@
   padding: 0;
 }
 
-.storyImg {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50px;
+/* div for all text in section */
+.storyText {
+  width: 100%;
+  text-align: center;
 }
+
 
 
 /* Works section */
@@ -214,11 +253,8 @@
 }
 
 .worksContent {
-  width: 90%;
   height: auto;
   border-radius: 30px;
-  display: flex;
-  flex-direction: column;
 }
 
 .worksText {
@@ -231,11 +267,11 @@
 /* Carousel */
 .carouselContainer {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -306,6 +342,20 @@
   right: 20%;
 }
 
+/* Guarantee section */
+.guaranteeSection {
+  width: 100%;
+  background-color: black;
+  border: 15px solid var(--grey);
+  background-image: linear-gradient(45deg, var(--grey) 12.5%, transparent 12.5%, transparent 50%, var(--grey) 50%, var(--grey) 62.5%, transparent 62.5%, transparent);
+  background-size: 20px 20px;
+}
+
+.guaranteeText {
+  text-align: center;
+  margin: 50px;
+}
+
 /* Areas Served Section */
 .areasSection {
   width: 100%;
@@ -371,13 +421,13 @@
   }
 
   /* Story section */
-  .storyContent {
+  /* .storyContent {
     justify-content: space-between;
     flex-direction: row;
-  }
+  } */
 
   /* div for all text in section */
-  .storyText {
+  /* .storyText {
     width: 45%;
   }
 
@@ -387,13 +437,13 @@
 
   .storyScrollwork {
     rotate: 90deg;
-    width: 13rem;
+   width: 13rem;
   }
 
   .storyImg {
     max-width: 45%;
     height: auto;
-  }
+  } */
 
   /* carousel */
   .carouselImage {
@@ -415,6 +465,14 @@
 
   .arrow:last-of-type {
     right: 3%;
+  }
+
+  .guaranteeContent {
+    flex-direction: row;
+  }
+
+  .guaranteeText{
+    text-align: left;
   }
 }
 
