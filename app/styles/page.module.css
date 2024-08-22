@@ -33,7 +33,6 @@
   max-width: 1440px;
   height: 100%;
   padding: 0;
-  /* margin: 0; */
 }
 
 .header {
@@ -46,10 +45,9 @@
   top: 0;
   background-color: rgba(134, 134, 134, 0.2);
   /* Semi-transparent background */
+  -webkit-backdrop-filter: blur(10px);/* For Safari */
   backdrop-filter: blur(10px);
   /* Frosted glass effect */
-  -webkit-backdrop-filter: blur(10px);
-  /* For Safari */
   box-shadow: 0 4px 6px rgba(0, 0, 0, .4);
   /* Optional: Add a subtle shadow */
   z-index: 1000;
@@ -92,12 +90,32 @@
   box-sizing: border-box;
 }
 
-.navItems {
-  width: 350px;
+#noBurgerNavItems {
+  display: none;
+}
+
+#burgerNavItems {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  top: 0;
+  left: 0;
+  margin-top: 70px;
+  position: absolute;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
+  background-color: rgba(134, 134, 134, 0.2);
+  /* Semi-transparent background */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  /* Frosted glass effect */
+  z-index: 1102;
+}
+
+#burgerNavItems a {
+  margin: 20px;
 }
 
 .navItems a {
@@ -106,6 +124,7 @@
   text-decoration: none;
   color: inherit;
   padding-bottom: 5px;
+
 }
 
 .navItems a::after {
@@ -160,6 +179,7 @@
 .hero_scrollwork {
   width: 100%;
   max-width: 450px;
+  height: auto;
 }
 
 /* Text under logo */
@@ -332,6 +352,7 @@
 
 .arrow img {
   height: 20px;
+  width: auto;
 }
 
 .arrow:first-of-type {
@@ -354,6 +375,8 @@
 .guaranteeText {
   text-align: center;
   margin: 50px;
+  height: auto;
+  width: auto;
 }
 
 /* Areas Served Section */
@@ -491,7 +514,23 @@
 /* Responsive media queries */
 /* Tablet */
 @media (min-width: 701px) {
-/* Hero section */
+
+  /* Nav menu */
+  .hamburger {
+    display: none;
+  }
+  #burgerNavItems {
+    display: none;
+  }
+  #noBurgerNavItems {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1.2rem;
+  }
+
+  /* Hero section */
   .heroSection {
     background-size: 80%;
   }
@@ -502,7 +541,7 @@
 
   .cutoutText {
     font-size: 5.5rem;
-    background-position: center -180px;
+    background-position: center -185px;
   }
 
   /* carousel */

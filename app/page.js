@@ -3,8 +3,26 @@
 import styles from './styles/page.module.css';
 import Image from 'next/image';
 import SimpleCarousel from './slider';
+import Hamburger from 'hamburger-react'
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  // Hamburger menu
+  // This var and useEffect are to detect if a device was rotated and remove hamburger
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      // If device has gone to landscape mode
+      if (window.innerWidth > window.innerHeight && isNavOpen) {
+        setIsNavOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    // Clean up event listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isNavOpen]);
 
   return (
     <main className={styles.main}>
@@ -12,16 +30,33 @@ export default function Home() {
       <header className={styles.header}>
         <div className={styles.contentWrapper}>
           <div className={styles.headerContent}>
-            <a href="#top" className={styles.TBicon}>TB</a>
-            <div className={styles.navItems}>
-              <a href="#story">Our Story</a>
-              <a href="#areas">Areas Served</a>
-              <a href="#contact">Contact</a>
-              <a href="#contact">Get your free estimate</a>
+            <a href="#top" className={styles.TBicon}>TuBros</a>
+            <div className={styles.navItems} id={styles.noBurgerNavItems}>
+              <a href="#story" onClick={() => setIsNavOpen(false)}>Our Story</a>
+              <a href="#areas" onClick={() => setIsNavOpen(false)}>Areas Served</a>
+              <a href="#contact" onClick={() => setIsNavOpen(false)}>Contact</a>
+              <a href="#contact" onClick={() => setIsNavOpen(false)}>Get your free estimate</a>
+            </div>
+            <div className={styles.hamburger}>
+              <Hamburger
+                toggled={isNavOpen}
+                onToggle={toggled => setIsNavOpen(toggled)}
+                duration={1}
+                label="Show navigation menu"
+              />
             </div>
           </div>
         </div>
       </header>
+      {isNavOpen && (
+        // This set is for use with the burger menu to allow the blur effect to work
+        <div className={styles.navItems} id={styles.burgerNavItems}>
+          <a href="#story" onClick={() => setIsNavOpen(false)}>Our Story</a>
+          <a href="#areas" onClick={() => setIsNavOpen(false)}>Areas Served</a>
+          <a href="#contact" onClick={() => setIsNavOpen(false)}>Contact</a>
+          <a href="#contact" onClick={() => setIsNavOpen(false)}>Get your free estimate</a>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className={styles.heroSection} id="top">
