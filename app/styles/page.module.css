@@ -4,8 +4,9 @@
 .areasContent,
 .contactContent,
 .reviewsContent,
-.guaranteeContent {
-  width: 90%;
+.guaranteeContent,
+.offeringsContent {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,6 +146,23 @@
   right: 0;
 }
 
+.navEstimate {
+  height: 35px;
+  width: 170px;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.navEstimate:hover {
+  background-color: var(--gold);
+  color: black;
+}
 /* Hero section */
 .heroSection {
   width: 100%;
@@ -274,14 +292,74 @@
 
 .worksContent {
   height: auto;
-  border-radius: 30px;
 }
 
 .worksText {
   width: 100%;
-  text-align: center;
-  border-bottom: 1px solid var(--gold);
+  /* border-bottom: 1px solid var(--gold); */
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to bottom left, rgb(112, 107, 55),
+    var(--gold),
+    rgb(112, 107, 55),
+    var(--gold),
+    rgb(112, 107, 55)) 1;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.worksParagraph {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.worksStandards {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.worksStandardsGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.worksStandard {
+  width: 200px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.worksStandard img{
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.worksStandard h3 {
+  margin: 0;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.worksStandard p {
+  font-size: 1.1rem;
+  background-color: var(--grey);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 /* Carousel */
@@ -368,6 +446,7 @@
   width: 100%;
   background-color: black;
   border: 15px solid var(--grey);
+  border-top: 15px solid black;
   background-image: linear-gradient(45deg, var(--grey) 12.5%, transparent 12.5%, transparent 50%, var(--grey) 50%, var(--grey) 62.5%, transparent 62.5%, transparent);
   background-size: 20px 20px;
 }
@@ -378,6 +457,8 @@
   height: auto;
   width: auto;
 }
+
+/* Offerings section */
 
 /* Areas Served Section */
 .areasSection {
@@ -514,6 +595,16 @@
 /* Responsive media queries */
 /* Tablet */
 @media (min-width: 701px) {
+.heroContent,
+  .storyContent,
+  .worksContent,
+  .areasContent,
+  .contactContent,
+  .reviewsContent,
+  .guaranteeContent,
+  .offeringsContent {
+    width: 90%;
+  }
 
   /* Nav menu */
   .hamburger {
@@ -542,6 +633,11 @@
   .cutoutText {
     font-size: 5.5rem;
     background-position: center -185px;
+  }
+
+  .worksStandards {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   /* carousel */
@@ -577,6 +673,7 @@
 
 /* laptop Desktop */
 @media (min-width: 992px) {
+
 
   /* carousel */
   .arrow:first-of-type {

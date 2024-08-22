@@ -31,12 +31,13 @@ export default function Home() {
         <div className={styles.contentWrapper}>
           <div className={styles.headerContent}>
             <a href="#top" className={styles.TBicon}>TBW</a>
+
             <div className={styles.navItems} id={styles.noBurgerNavItems}>
               <a href="#story" onClick={() => setIsNavOpen(false)}>Our Story</a>
               <a href="#areas" onClick={() => setIsNavOpen(false)}>Areas Served</a>
               <a href="#contact" onClick={() => setIsNavOpen(false)}>Contact</a>
-              <a href="#contact" onClick={() => setIsNavOpen(false)}>Get your free estimate</a>
             </div>
+            <a href="#contact" className={styles.navEstimate}>Book Free Estimate</a>
             <div className={styles.hamburger}>
               <Hamburger
                 toggled={isNavOpen}
@@ -54,7 +55,6 @@ export default function Home() {
           <a href="#story" onClick={() => setIsNavOpen(false)}>Our Story</a>
           <a href="#areas" onClick={() => setIsNavOpen(false)}>Areas Served</a>
           <a href="#contact" onClick={() => setIsNavOpen(false)}>Contact</a>
-          <a href="#contact" onClick={() => setIsNavOpen(false)}>Get your free estimate</a>
         </div>
       )}
 
@@ -103,11 +103,45 @@ export default function Home() {
         <div className={styles.contentWrapper}>
           <div className={styles.worksContent}>
             <div className={styles.worksText}>
-              <h2>Our Work</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+
+              <div className={styles.worksParagraph}>
+                <h2>Our Work</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+
+              {/* Standards */}
+              <div className={styles.worksStandards}>
+                {/* Standard */}
+                <div className={styles.worksStandardsGroup}>
+                  <div className={styles.worksStandard}>
+                    <img src='/icon-five_stars.svg' alt='quality icon'></img>
+                    <h3>Decades of Highly Satisfied Customers</h3>
+                    <p>A proven record of happy, satisfied customers, with 9 out of 10 of them recommending us to friends and family.</p>
+                  </div>
+                  <div className={styles.worksStandard}>
+                    <img src='/icon-thumbs_up.svg' alt='quality icon'></img>
+                    <h3>Professional and Friendly Service</h3>
+                    <p>We deliver spotless windows with friendly smiles, ensuring every visit is a pleasant experience.</p>
+                  </div>
+                </div>
+
+                <div className={styles.worksStandardsGroup}>
+                  <div className={styles.worksStandard}>
+                    <img src='/icon-quality.svg' alt='quality icon'></img>
+                    <h3>High Quality Of Work</h3>
+                    <p>We take pride in our high-quality work, using top-grade tools and techniques to ensure every window shines with perfection.</p>
+                  </div>
+                  <div className={styles.worksStandard}>
+                    <img src='/icon-hearts.svg' alt='quality icon'></img>
+                    <h3>Family Driven Business</h3>
+                    <p>As a family-driven business, we treat our customers like part of the family, prioritizing trust, care, and attention to detail in every job.</p>
+                  </div>
+                </div>
+              </div>
             </div>
+            <h2>Gallary</h2>
             {/* <Carousel/> */}
             <SimpleCarousel />
           </div>
@@ -122,6 +156,23 @@ export default function Home() {
             <div className={styles.guaranteeText}>
               <h2>A Clean Guarantee</h2>
               <p>We will do it right the first time and we promise that if you are not completely satisfied, we&apos;ll make it right.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Offerings section */}
+      <section className={styles.offeringsSection}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.offeringsContent}>
+            <h2>Offerings</h2>
+
+            <div className={styles.offering}>
+              <img></img>
+              <div className={styles.offeringText}>
+                <h3></h3>
+                <p></p>
+              </div>
             </div>
           </div>
         </div>

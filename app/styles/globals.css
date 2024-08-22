@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
 
 :root {
-  --grey: rgb(21, 21, 21);
-  /* --grey: rgb(20, 17, 0); */
-  --gold: rgb(228, 215, 139);
+  --grey: rgb(21, 21, 21); /* Hex: #151515 */
+  --gold: rgb(228, 215, 139); /* Hex: #E4D78B */
 }
 
 
