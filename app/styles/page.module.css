@@ -459,13 +459,20 @@
 }
 
 /* Offerings section */
+
+.offeringsContainer{
+  display: flex;
+  flex-direction: column;
+}
+
 .offering {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 300px;
+  height: auto;
+  margin-bottom: 200px;
 }
 
 .offering img {
@@ -592,7 +599,6 @@
   content: '“';
   /* Opening quote for ::before and closing quote for ::after */
   font-size: 4rem;
-  /* Adjust the size as needed */
   color: var(--gold);
   /* Gold color for the quotation marks */
   position: absolute;
@@ -600,18 +606,14 @@
 
 .reviewBoxText::before {
   top: -10px;
-  /* Adjust the position as needed */
   left: -20px;
-  /* Adjust the position as needed */
   content: '“';
   /* Opening quote */
 }
 
 .reviewBoxText::after {
   bottom: -10px;
-  /* Adjust the position as needed */
   right: -20px;
-  /* Adjust the position as needed */
   content: '”';
   /* Closing quote */
 }
@@ -702,6 +704,15 @@
 
   .guaranteeText{
     text-align: left;
+  }
+
+  .offeringsContainer {
+    flex-direction: row;
+  }
+
+  .offering {
+    width: 50%;
+    margin-bottom: 300px;
   }
 }
 

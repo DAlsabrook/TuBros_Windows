@@ -167,19 +167,20 @@ export default function Home() {
           <div className={styles.offeringsContent}>
             <h2>Offerings</h2>
 
-            <div className={styles.offering}>
-              <img src='/window_placeholder-2.png' alt='residential build image'></img>
-              <div className={styles.offeringText}>
-                <h3>Residential</h3>
-                <p>Our service begins by determining a service day that is least disruptive for you and your family. Includes exterior and interior cleaning services to fit your needs, we clean everything from windows to interior glass surfaces like showers and doors.</p>
+            <div className={styles.offeringsContainer}>
+              <div className={styles.offering}>
+                <img src='/window_placeholder-2.png' alt='residential build image'></img>
+                <div className={styles.offeringText}>
+                  <h3>Residential</h3>
+                  <p>Our service begins by determining a service day that is least disruptive for you and your family. Includes exterior and interior cleaning services to fit your needs, we clean everything from windows to interior glass surfaces like showers and doors.</p>
+                </div>
               </div>
-            </div>
-
-            <div className={styles.offering}>
-              <img src='/window_placeholder-1.jpg' alt='commercial build image'></img>
-              <div className={styles.offeringText}>
-                <h3>Commercial</h3>
-                <p>An immaculate business exterior elevates your image while attracting customers. We provide exterior and interior cleaning services using squeegees to scrub each individual window by hand.</p>
+              <div className={styles.offering}>
+                <img src='/window_placeholder-1.jpg' alt='commercial build image'></img>
+                <div className={styles.offeringText}>
+                  <h3>Commercial</h3>
+                  <p>An immaculate business exterior elevates your image while attracting customers. We provide exterior and interior cleaning services using squeegees to scrub each individual window by hand.</p>
+                </div>
               </div>
             </div>
           </div>
