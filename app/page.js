@@ -30,7 +30,7 @@ export default function Home() {
       <header className={styles.header}>
         <div className={styles.contentWrapper}>
           <div className={styles.headerContent}>
-            <a href="#top" className={styles.TBicon}>TuBros</a>
+            <a href="#top" className={styles.TBicon}>TBW</a>
             <div className={styles.navItems} id={styles.noBurgerNavItems}>
               <a href="#story" onClick={() => setIsNavOpen(false)}>Our Story</a>
               <a href="#areas" onClick={() => setIsNavOpen(false)}>Areas Served</a>
