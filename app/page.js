@@ -141,9 +141,14 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <h2>Gallary</h2>
-            {/* <Carousel/> */}
-            <SimpleCarousel />
+            <div className={styles.worksGallary}>
+              <h2>Gallary</h2>
+              <div className={styles.storyScrollDiv}>
+                <Image src="/single_bar_scrollwork.png" alt="scrollwork design" className={styles.storyScrollwork} width={5} height={5} />
+              </div>
+              {/* <Carousel/> */}
+              <SimpleCarousel />
+            </div>
           </div>
         </div>
       </section>
@@ -213,11 +218,25 @@ export default function Home() {
           <div className={styles.reviewsContent}>
             <h2>Testimonials</h2>
 
-            <div className={styles.reviewBox}>
-              <p className={styles.reviewBoxText}>
-                Daniel has been cleaning the windows at my business for years. We set up a monthly schedule, and I don’t have to worry about it anymore. Great service!
-              </p>
-              <h3 className={styles.reviewBoxName}>- David Alsabrook</h3>
+            <div className={styles.reviewsContainer}>
+              <div className={styles.reviewBox}>
+                <p className={styles.reviewBoxText}>
+                  Daniel has been cleaning the windows at my business for years. We set up a monthly schedule, and I don’t have to worry about it anymore. Great service!
+                </p>
+                <h3 className={styles.reviewBoxName}>- David Alsabrook</h3>
+              </div>
+              <div className={styles.reviewBox}>
+                <p className={styles.reviewBoxText}>
+                  Daniel has been cleaning the windows at my business for years. We set up a monthly schedule, and I don’t have to worry about it anymore. Great service!
+                </p>
+                <h3 className={styles.reviewBoxName}>- David Alsabrook</h3>
+              </div>
+              <div className={styles.reviewBox}>
+                <p className={styles.reviewBoxText}>
+                  Daniel has been cleaning the windows at my business for years. We set up a monthly schedule, and I don’t have to worry about it anymore. Great service!
+                </p>
+                <h3 className={styles.reviewBoxName}>- David Alsabrook</h3>
+              </div>
             </div>
 
           </div>
