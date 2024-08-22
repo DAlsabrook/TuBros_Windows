@@ -459,6 +459,40 @@
 }
 
 /* Offerings section */
+.offering {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 300px;
+}
+
+.offering img {
+  width: 90%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.offeringText {
+  text-align: center;
+  width: 80%;
+  background: rgba(134, 134, 134, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  /* For Safari */
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 10px;
+  top: 85%;
+  left: 10%;
+  position: absolute;
+  box-shadow: 0 5px 15px black;
+}
+
+.offeringText h3{
+  font-size: 2rem;
+}
+
 
 /* Areas Served Section */
 .areasSection {
