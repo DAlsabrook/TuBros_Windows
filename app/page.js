@@ -3,6 +3,7 @@
 import styles from './styles/page.module.css';
 import Image from 'next/image';
 import SimpleCarousel from './slider';
+import Form from './form';
 import Hamburger from 'hamburger-react'
 import { useState, useEffect } from 'react';
 
@@ -206,8 +207,7 @@ export default function Home() {
         <div className={styles.contentWrapper}>
           <div className={styles.contactContent}>
             <h2>Contact us!</h2>
-            <p>Call button</p>
-            <p>possible form for messaging</p>
+            <Form/>
           </div>
         </div>
       </section>

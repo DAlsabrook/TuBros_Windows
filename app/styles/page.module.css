@@ -334,12 +334,18 @@
 }
 
 .worksStandard {
-  width: 200px;
+  width: 230px;
+  height: 350px;
   margin: 20px;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
+  border: 5px solid var(--grey);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px white;
 }
 
 .worksStandard img{
@@ -358,7 +364,10 @@
   font-size: 1.1rem;
   background-color: var(--grey);
   padding: 10px;
-  border-radius: 10px;
+  height: 150px;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 /* gallary */
@@ -371,6 +380,10 @@
   border: 15px solid var(--grey);
 }
 
+.worksGallary h2{
+  margin-bottom: 0;
+}
+
 /* Carousel */
 .carouselContainer {
   display: flex;
@@ -380,12 +393,18 @@
   width: 100%;
   height: 400px;
   overflow: hidden;
+  margin-top: 50px;
 }
 
 .carouselInner {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
+  padding: 0;
+}
+
+.carouselImageWrapper {
+  height: 100% !important;
 }
 
 .carouselItem {
@@ -688,6 +707,10 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+    .worksStandard {
+      width: 200px;
+    }
 
   /* carousel */
   .carouselImage {
