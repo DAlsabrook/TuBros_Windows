@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "paths": {
+    "/PostSNS": {
+      "name": "/PostSNS",
+      "lambdaFunction": "TuBrosFunc",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

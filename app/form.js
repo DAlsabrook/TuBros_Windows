@@ -11,7 +11,7 @@ export default function Form() {
       console.log(message)
 
       try {
-        const response = await fetch('https://fancy-rain-da4c.dfalsabrook.workers.dev', { //Cloudflare worker url
+        const response = await fetch('https://4aokq8gth1.execute-api.us-east-2.amazonaws.com/prod', { //Cloudflare worker url
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
