@@ -562,9 +562,32 @@
 
 .contactContent {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.formName,
+.formCompany,
+.formBuilding,
+.formMessage,
+.formSubmit {
+ height: 60px;
+ width: 80%;
+ margin: 20px;
+ font-size: 1.2rem;
+ border-radius: 20px;
+ text-align: center;
+}
 
 /* Reviews section */
 .reviewsSection {
