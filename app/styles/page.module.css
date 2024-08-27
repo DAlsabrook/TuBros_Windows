@@ -1,4 +1,3 @@
-.heroContent,
 .storyContent,
 .worksContent,
 .areasContent,
@@ -165,8 +164,6 @@
 }
 
 .navEstimate {
-  height: 35px;
-  width: 170px;
   color: var(--gold);
   border: 1px solid var(--gold);
   font-weight: 600;
@@ -175,6 +172,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  text-align: center;
 }
 
 .navEstimate:hover {
@@ -184,7 +182,7 @@
 /* Hero section */
 .heroSection {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 50px);
   background-color: black;
   background-image: url('/skyline_background.jpg');
   background-repeat: no-repeat;
@@ -193,10 +191,17 @@
 }
 
 .heroContent {
-  margin: auto;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.heroContent p:nth-child(3) {
+  margin-bottom: 40px;
 }
 
 .heroLogo {
@@ -564,6 +569,7 @@
 .areasSection {
   width: 100%;
   position: relative;
+  border: 5px ridge black;
 }
 .areasSection::before {
   content: "";
@@ -572,10 +578,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/tulsaMap.jpg');
+  background-image: url('/tulsaMap2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5;
+  background-position: center;
+  opacity: 0.2;
   z-index: -1;
   /* Ensure the pseudo-element is behind the content */
 }
@@ -635,19 +642,16 @@
 }
 
 .formSelectBtn{
-  background: none;
+  border: none;
+  background: black;
   font-size: 80%;
   border-radius: 0;
   font-weight: 600;
 }
 
-.formSelectBtn::before {
-/* Remove default button style */
-  display: none;
-}
-
 .formSelectBtn.active {
-  background-color: var(--grey);
+  border: none;
+  background: var(--grey);
   border-top: 1px solid var(--gold);
   animation: fadeInOut .8s ease;
   transform: scale(1.2);
@@ -660,7 +664,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 300px;
+  height: 450px;
   animation: fadeInOut .8s ease;
   background-color: var(--grey);
   margin-top: -5px;
@@ -675,7 +679,8 @@
 .formNumber,
 .formCompany,
 .formBuilding,
-.formMessage {
+.formMessage,
+.formDropdown {
  height: 40px;
  width: 80%;
  margin: 15px;
@@ -685,6 +690,10 @@
  background-color: var(--grey);
  color: white;
  text-align: center;
+}
+
+.formDropdown {
+  color: grey;
 }
 
 .formMessage {
@@ -923,7 +932,7 @@
   }
   .contactCallUsContainer {
     border: 20px solid var(--grey);
-    height: 300px;
+    height: 450px;
     margin-top: 35px;
   }
 

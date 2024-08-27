@@ -17,6 +17,9 @@ export default function Form() {
     const number = form.number.value;
     const company = form.company ? form.company.value : 'N/A';
     const message = form.message ? form.message.value : 'N/A';
+    const city = form.city ? form.city.value : 'N/A';
+
+
     const submitButton = document.getElementById('submitBtn');
     const thankYouMessage = document.getElementById('thankYouMessage');
 
@@ -24,14 +27,14 @@ export default function Form() {
       alert('Though we would love to hear from you, we do have to limit the amount of messeges sent per person.\n\nGive us a call or text at (918) 402-8120!');
       return;
     }
-    
+
     if (submitButton.innerText === "Send") {
       submitButton.innerText = 'Thank You!';
       thankYouMessage.innerText = 'We will call or text soon!';
     }
 
 
-    const fullMessage = `Type: ${form.id}\nName: ${name}\nPhone Number: ${number}\nCompany: ${company}\nMessage: ${message}`;
+    const fullMessage = `Type: ${form.id}\nName: ${name}\nCity: ${city}\nPhone Number: ${number}\nCompany: ${company}\nMessage: ${message}`;
 
     try {
       const response = await fetch('https://tubros-worker.dfalsabrook.workers.dev/', { // Cloudflare worker URL
@@ -111,6 +114,20 @@ export default function Form() {
         <form className={styles.form} id="residential">
           <input type='text' className={styles.formName} name='name' placeholder='Full Name' required></input>
           <input type='text' className={styles.formNumber} name='number' placeholder='Phone Number' required onInput={handlePhoneInput}></input>
+          <select className={styles.formDropdown} name="city" required>
+            <option value="" disabled defaultValue>City</option>
+            <option value="Tulsa">Tulsa</option>
+            <option value="Broken Arrow">Broken Arrow</option>
+            <option value="Bixby">Bixby</option>
+            <option value="Glenpool">Glenpool</option>
+            <option value="Jenks">Jenks</option>
+            <option value="Sapulpa">Sapulpa</option>
+            <option value="Sand Springs">Sand Springs</option>
+            <option value="Skiatook">Skiatook</option>
+            <option value="Owasso">Owasso</option>
+            <option value="Catoosa">Catoosa</option>
+            <option value="Other">Other</option>
+          </select>
           <textarea className={styles.formMessage} name="message" placeholder="Message (Optional)" maxLength="100"></textarea>
           <button className={styles.formSubmit} type="submit" id='submitBtn'>Send</button>
         </form>
@@ -120,6 +137,20 @@ export default function Form() {
         <form className={styles.form} id="commercial">
           <input type='text' className={styles.formName} name='name' placeholder='Full Name' required></input>
           <input type='text' className={styles.formNumber} name='number' placeholder='Phone Number' required onInput={handlePhoneInput}></input>
+          <select className={styles.formDropdown} name="city" required>
+            <option value="" disabled defaultValue>City</option>
+            <option value="Tulsa">Tulsa</option>
+            <option value="Broken Arrow">Broken Arrow</option>
+            <option value="Bixby">Bixby</option>
+            <option value="Glenpool">Glenpool</option>
+            <option value="Jenks">Jenks</option>
+            <option value="Sapulpa">Sapulpa</option>
+            <option value="Sand Springs">Sand Springs</option>
+            <option value="Skiatook">Skiatook</option>
+            <option value="Owasso">Owasso</option>
+            <option value="Catoosa">Catoosa</option>
+            <option value="Other">Other</option>
+          </select>
           <input type='text' className={styles.formCompany} name='company' placeholder='Business' required></input>
           <textarea className={styles.formMessage} name="message" placeholder="Optional (Optional)" maxLength="100"></textarea>
           <button className={styles.formSubmit} type="submit" id='submitBtn'>Send</button>
