@@ -26,7 +26,7 @@ async function handleRequest(request) {
 				const accountSid = globalThis.TWILIO_ACCOUNT_SID;
 				const authToken = globalThis.TWILIO_AUTH_TOKEN;
 				// +18777804236 twilio test number
-				const phoneToText = '+19185571067';
+				const phoneToText = '+1' + globalThis.PHONE_TO_TEXT;
 
 				if (!accountSid || !authToken) {
 					throw new Error('Environment variables TWILIO_ACCOUNT_SID or TWILIO_AUTH_TOKEN are not set');
