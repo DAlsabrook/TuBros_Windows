@@ -643,13 +643,12 @@
   padding-top: 10px;
 }
 
-.formSelectBtn{
+.formSelectBtn {
   border: none;
   background: black;
   font-size: 80%;
   border-radius: 0;
   font-weight: 600;
-  font-size: 1.1rem;
 }
 
 .formSelectBtn.active {
@@ -936,11 +935,15 @@
   .contactCallUsContainer {
     border: 20px solid var(--grey);
     height: 450px;
-    margin-top: 35px;
+    margin-top: 47px;
   }
 
   .form {
     border-radius: 0;
+  }
+
+  .formSelectBtn {
+    font-size: 1.2rem;
   }
 }
 
