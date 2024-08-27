@@ -131,7 +131,7 @@ export default function Home() {
                 <div className={styles.worksStandardsGroup}>
                   <div className={styles.worksStandard}>
                     <img src='/icon-quality.svg' alt='quality icon'></img>
-                    <h3>High Quality Of Work</h3>
+                    <h3>High Quality Work</h3>
                     <p>We take pride in our high-quality work, using top-grade tools and techniques to ensure every window shines with perfection.</p>
                   </div>
                   <div className={styles.worksStandard}>
