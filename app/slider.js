@@ -3,6 +3,9 @@ import styles from './styles/page.module.css';
 
 // Carousel images
 const images = [
+  '/work-2.jpg',
+  '/work-1.jpg',
+  '/work-3.jpg',
   '/window_placeholder-1.jpg',
   '/window_placeholder-2.png',
   '/window_placeholder-3.jpeg',

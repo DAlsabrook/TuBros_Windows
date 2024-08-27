@@ -120,7 +120,6 @@ export default function Form() {
           <button className={styles.formSubmit} type="submit">Send Message</button>
         </form>
       )}
-      <p className={styles.formNotice}>*Your information is encrypted immediatly, sent via SMS, and never saved.</p>
     </div>
   );
 }

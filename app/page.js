@@ -187,7 +187,7 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.offering}>
-                <img src='/window_placeholder-1.jpg' alt='commercial build image'></img>
+                <img src='/work-2.jpg' alt='commercial build image'></img>
                 <div className={styles.offeringText}>
                   <h3>Commercial</h3>
                   <p>An immaculate business exterior elevates your image while attracting customers. We provide exterior and interior cleaning services using squeegees to scrub each individual window by hand.</p>
@@ -211,15 +211,16 @@ export default function Home() {
       <section className={styles.contactSection} id="contact">
         <div className={styles.contentWrapper}>
           <div className={styles.contactContent}>
-            <h2>Contact us!</h2>
-            <div className={styles.callUsContainer}>
+            <div className={styles.contactCallUsContainer}>
+              <h2>Contact us!</h2>
               <a href="tel:+19185555555" className={styles.callUsButton}>
                 Call (918)555-5555
               </a>
+              <p>Or send us a message<br/> for your free in-person estimate!</p>
             </div>
-            <p>Or send us a message for you free in-person estimate!</p>
             <Form/>
           </div>
+          <p className={styles.formNotice}>*Your information is encrypted immediatly, sent via SMS, and never saved.</p>
         </div>
       </section>
 
