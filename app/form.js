@@ -74,11 +74,23 @@ export default function Form() {
   };
 
   return (
-    <div>
+    <div className={styles.formContainer}>
       <div className={styles.formSelectBtnContainer}>
-        <button className={styles.formSelectBtn} onClick={() => handleFormSelection('residential')}>Residential</button>
-        <button className={styles.formSelectBtn} onClick={() => handleFormSelection('commercial')}>Commercial</button>
-        <button className={styles.formSelectBtn} onClick={() => handleFormSelection('general')}>General Questions</button>
+        <button
+          className={`${styles.formSelectBtn} ${selectedForm === 'residential' ? styles.active : ''}`}
+          onClick={() => handleFormSelection('residential')}>
+          Residential
+        </button>
+        <button
+          className={`${styles.formSelectBtn} ${selectedForm === 'commercial' ? styles.active : ''}`}
+          onClick={() => handleFormSelection('commercial')}>
+          Commercial
+        </button>
+        <button
+          className={`${styles.formSelectBtn} ${selectedForm === 'general' ? styles.active : ''}`}
+          onClick={() => handleFormSelection('general')}>
+          Questions
+        </button>
       </div>
 
       {selectedForm === 'residential' && (

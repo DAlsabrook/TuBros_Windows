@@ -69,7 +69,12 @@ export default function Home() {
             </div>
             <p>Glass so clean, it can&apos;t be seen!</p>
             <p>Free Estimates - 35+ Years Experience - Quick Service</p>
-            <button>Call Now</button>
+            {/* Call Us Button */}
+            <div className={styles.callUsContainer}>
+              <a href="tel:+19185555555" className={styles.callUsButton}>
+                Call (918)555-5555
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -207,6 +212,12 @@ export default function Home() {
         <div className={styles.contentWrapper}>
           <div className={styles.contactContent}>
             <h2>Contact us!</h2>
+            <div className={styles.callUsContainer}>
+              <a href="tel:+19185555555" className={styles.callUsButton}>
+                Call (918)555-5555
+              </a>
+            </div>
+            <p>Or send us a message for you free in-person estimate!</p>
             <Form/>
           </div>
         </div>

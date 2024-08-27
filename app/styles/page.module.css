@@ -16,6 +16,18 @@
   margin-bottom: 50px;
 }
 
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .main {
   height: 100%;
   width: 100%;
@@ -558,6 +570,7 @@
 /* Contact section */
 .contactSection {
   width: 100%;
+  background-color: black;
 }
 
 .contactContent {
@@ -567,29 +580,44 @@
   align-items: center;
 }
 
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
 
-  50% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 /* Form */
+.formContainer{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .formSelectBtnContainer {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: auto;
+  overflow: hidden;
+  padding-top: 10px;
 }
 
 .formSelectBtn{
   background: none;
   font-size: 80%;
+  border-radius: 0;
+  font-weight: 600;
+}
+
+.formSelectBtn::before {
+/* Remove default button style */
+  background: none;
+}
+
+.formSelectBtn.active {
+  background-color: var(--grey);
+  border-top: 1px solid var(--gold);
+  animation: fadeInOut .8s ease;
+  transform: scale(1.2);
+  color: var(--gold);
 }
 
 .form {
@@ -598,7 +626,14 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  animation: fadeInOut 3s ease;
+  animation: fadeInOut .8s ease;
+  background-color: var(--grey);
+  margin-top: -5px;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .formName,
@@ -615,7 +650,6 @@
  background-color: var(--grey);
  color: white;
  text-align: center;
- outline: none;
 }
 
 .formSubmit {
