@@ -226,7 +226,7 @@
 .callUsButton {
   height: 45px;
   color: var(--gold);
-  border: 1px solid var(--gold);
+  border: 1px solid var(--dark-gold);
   font-weight: 600;
   border-radius: 10px;
   display: flex;
@@ -335,7 +335,6 @@
 
 .worksText {
   width: 100%;
-
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -347,6 +346,9 @@
   width: 100%;
   padding: 20px;
   text-align: center;
+  background-image: linear-gradient(45deg, var(--grey) 12.5%, transparent 12.5%, transparent 50%, var(--grey) 50%, var(--grey) 62.5%, transparent 62.5%, transparent);
+  background-size: 20px 20px;
+  border: 5px solid var(--grey);
 }
 
 .worksStandards {
@@ -378,8 +380,7 @@
   align-items: center;
   text-align: center;
   border: 5px solid var(--grey);
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px white;
+  /* box-shadow: 5px 5px 0 var(--dark-gold); */
 }
 
 .worksStandard img{
@@ -688,7 +689,7 @@
  margin: 15px;
  font-size: 1.2rem;
  border: none;
- border-bottom: 1px solid var(--gold);
+ border-bottom: 1px solid var(--dark-gold);
  background-color: var(--grey);
  color: white;
  text-align: center;
@@ -779,7 +780,7 @@
   content: '“';
   /* Opening quote for ::before and closing quote for ::after */
   font-size: 4rem;
-  color: var(--gold);
+  color: var(--dark-gold);
   /* Gold color for the quotation marks */
   position: absolute;
 }

@@ -3,6 +3,7 @@
 :root {
   --grey: rgb(21, 21, 21); /* Hex: #151515 */
   --gold: rgb(228, 215, 139); /* Hex: #E4D78B */
+  --dark-gold: rgb(138, 127, 65);
 }
 
 
@@ -58,7 +59,7 @@ a:hover {
 button {
   background: var(--grey);
   color: var(--gold);
-  border: 1px solid var(--gold);
+  border: 1px solid var(--dark-gold);
   font-weight: 600;
   border-radius: 10px;
   display: flex;
