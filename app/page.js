@@ -176,8 +176,6 @@ export default function Home() {
       <section className={styles.offeringsSection}>
         <div className={styles.contentWrapper}>
           <div className={styles.offeringsContent}>
-            <h2>Offerings</h2>
-
             <div className={styles.offeringsContainer}>
               <div className={styles.offering}>
                 <img src='/window_placeholder-2.png' alt='residential build image'></img>
