@@ -218,6 +218,24 @@
   height: auto;
 }
 
+.callUsButton {
+  height: 45px;
+  width: 200px;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
+.callUsButton:hover {
+  background-color: var(--gold);
+  color: black;
+}
 /* Text under logo */
 .heroContent p {
   font-size: .8rem;
@@ -609,7 +627,7 @@
 
 .formSelectBtn::before {
 /* Remove default button style */
-  background: none;
+  display: none;
 }
 
 .formSelectBtn.active {

@@ -3,17 +3,27 @@ addEventListener('fetch', event => {
 });
 
 async function handleRequest(request) {
-	const originURL = 'http://localhost:3000';
+	const allowedOrigins = [
+		'http://localhost:3000',
+		'https://tubroswindows.com',
+		'https://www.tubroswindows.com'
+	];
+
+	const origin = request.headers.get('Origin');
+	let corsHeaders = {
+		'Access-Control-Allow-Methods': 'POST, OPTIONS',
+		'Access-Control-Allow-Headers': 'Content-Type',
+	};
+
+	if (allowedOrigins.includes(origin)) {
+		corsHeaders['Access-Control-Allow-Origin'] = origin;
+	}
 
 	if (request.method === 'OPTIONS') {
 		// Handle CORS preflight request
 		return new Response(null, {
 			status: 204,
-			headers: {
-				'Access-Control-Allow-Origin': originURL,
-				'Access-Control-Allow-Methods': 'POST, OPTIONS',
-				'Access-Control-Allow-Headers': 'Content-Type',
-			},
+			headers: corsHeaders,
 		});
 	}
 
@@ -52,28 +62,19 @@ async function handleRequest(request) {
 			}
 			return new Response('Message sent successfully', {
 				status: 200,
-				headers: {
-					'Access-Control-Allow-Origin': originURL,
-					'Content-Type': 'application/json',
-				},
+				headers: corsHeaders,
 			});
 		} catch (error) {
 			console.error('Error sending message:', error);
 			return new Response('Failed to send message', {
 				status: 500,
-				headers: {
-					'Access-Control-Allow-Origin': originURL,
-					'Content-Type': 'application/json',
-				},
+				headers: corsHeaders,
 			});
 		}
 	}
 
 	return new Response('Method not allowed', {
 		status: 405,
-		headers: {
-			'Access-Control-Allow-Origin': originURL,
-			'Content-Type': 'application/json',
-		},
+		headers: corsHeaders,
 	});
 }
