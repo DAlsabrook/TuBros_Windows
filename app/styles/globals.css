@@ -73,6 +73,7 @@ button:hover {
   background-color: var(--gold);
   color: black;
 }
+
 h2 {
   color: var(--gold);
   font-size: 3rem;

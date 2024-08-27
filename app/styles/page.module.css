@@ -498,10 +498,12 @@
 
 .arrow:first-of-type {
   left: 10%;
+  background: var(--grey) !important;
 }
 
 .arrow:last-of-type {
   right: 10%;
+  background: var(--grey) !important;
 }
 
 /* Guarantee section */
