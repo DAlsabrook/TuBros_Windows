@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './styles/page.module.css';
+import { ConsoleLogger } from '@aws-amplify/core';
 
 export default function Form() {
   const [selectedForm, setSelectedForm] = useState('residential'); // Default to residential on load
@@ -16,6 +17,19 @@ export default function Form() {
     const number = form.number.value;
     const company = form.company ? form.company.value : 'N/A';
     const message = form.message ? form.message.value : 'N/A';
+    const submitButton = document.getElementById('submitBtn');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+
+    if (thankYouMessage.innerText === 'We will call or text soon!') {
+      alert('Though we would love to hear from you, we do have to limit the amount of messeges sent per person.\n\nGive us a call or text at (918) 402-8120!');
+      return;
+    }
+    
+    if (submitButton.innerText === "Send") {
+      submitButton.innerText = 'Thank You!';
+      thankYouMessage.innerText = 'We will call or text soon!';
+    }
+
 
     const fullMessage = `Type: ${form.id}\nName: ${name}\nPhone Number: ${number}\nCompany: ${company}\nMessage: ${message}`;
 
@@ -98,7 +112,7 @@ export default function Form() {
           <input type='text' className={styles.formName} name='name' placeholder='Full Name' required></input>
           <input type='text' className={styles.formNumber} name='number' placeholder='Phone Number' required onInput={handlePhoneInput}></input>
           <textarea className={styles.formMessage} name="message" placeholder="Message (Optional)" maxLength="100"></textarea>
-          <button className={styles.formSubmit} type="submit">Send Message</button>
+          <button className={styles.formSubmit} type="submit" id='submitBtn'>Send</button>
         </form>
       )}
 
@@ -108,7 +122,7 @@ export default function Form() {
           <input type='text' className={styles.formNumber} name='number' placeholder='Phone Number' required onInput={handlePhoneInput}></input>
           <input type='text' className={styles.formCompany} name='company' placeholder='Business' required></input>
           <textarea className={styles.formMessage} name="message" placeholder="Optional (Optional)" maxLength="100"></textarea>
-          <button className={styles.formSubmit} type="submit">Send Message</button>
+          <button className={styles.formSubmit} type="submit" id='submitBtn'>Send</button>
         </form>
       )}
 
@@ -117,7 +131,7 @@ export default function Form() {
           <input type='text' className={styles.formName} name='name' placeholder='Full Name' required></input>
           <input type='text' className={styles.formNumber} name='number' placeholder='Phone Number' required onInput={handlePhoneInput}></input>
           <textarea className={styles.formMessage} name="message" placeholder="Question" maxLength="100" required></textarea>
-          <button className={styles.formSubmit} type="submit">Send Message</button>
+          <button className={styles.formSubmit} type="submit" id='submitBtn'>Send</button>
         </form>
       )}
     </div>

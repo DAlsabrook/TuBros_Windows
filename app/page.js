@@ -72,7 +72,7 @@ export default function Home() {
             {/* Call Us Button */}
             <div className={styles.callUsContainer}>
               <a href="tel:+19185555555" className={styles.callUsButton}>
-                Call (918)555-5555
+                Call&nbsp; (918) 402-8120
               </a>
             </div>
           </div>
@@ -213,10 +213,9 @@ export default function Home() {
           <div className={styles.contactContent}>
             <div className={styles.contactCallUsContainer}>
               <h2>Contact us!</h2>
-              <a href="tel:+19185555555" className={styles.callUsButton}>
-                Call (918)555-5555
-              </a>
-              <p>Or send us a message<br/> for your free in-person estimate!</p>
+              <a href="tel:+19185555555" className={styles.callUsButton}>Call&nbsp; (918) 402-8120</a>
+              <p>Or send us a message<br/> for your free estimate!</p>
+              <p className={styles.contactThankYou} id='thankYouMessage'></p>
             </div>
             <Form/>
           </div>
@@ -259,9 +258,13 @@ export default function Home() {
       <footer className={styles.footer}>
         <div className={styles.contentWrapper}>
           <div className={styles.footerContent}>
-            <p>TuBros logo img</p>
-            <p>Fully Insured</p>
-            <p>copyright 2024</p>
+            <div className={styles.footerLogo}>
+              <h1 className={styles.footerTitle}>TuBros Windows</h1>
+              <Image src="/full_scrollwork.png" alt="scrollwork design" className={styles.footer_scrollwork} width={250} height={45} />
+            </div>
+            <a href="tel:+19185555555">Call&nbsp; (918) 402-8120</a>
+            <p>© 2024 TuBros Windows. All rights reserved.</p>
+            <a href='#top'>Back to top</a>
           </div>
         </div>
       </footer>
