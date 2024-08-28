@@ -41,7 +41,10 @@ export default function Home() {
                 document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
                 }}>Contact</a>
             </div>
-            <a href="#contact" className={styles.navEstimate}>Book Free Estimate</a>
+            <a href="#contact" className={styles.navEstimate} onClick={() => {
+              setIsNavOpen(false)
+              document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }}>Book Free Estimate</a>
             <div className={styles.hamburger}>
               <Hamburger
                 toggled={isNavOpen}
