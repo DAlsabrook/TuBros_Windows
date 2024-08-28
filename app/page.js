@@ -36,7 +36,10 @@ export default function Home() {
             <div className={styles.navItems} id={styles.noBurgerNavItems}>
               <a href="#story" onClick={() => setIsNavOpen(false)}>Our Story</a>
               <a href="#areas" onClick={() => setIsNavOpen(false)}>Areas Served</a>
-              <a href="#contact" onClick={() => setIsNavOpen(false)}>Contact</a>
+              <a href="#contact" onClick={() => {
+                setIsNavOpen(false)
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                }}>Contact</a>
             </div>
             <a href="#contact" className={styles.navEstimate}>Book Free Estimate</a>
             <div className={styles.hamburger}>
@@ -55,7 +58,10 @@ export default function Home() {
         <div className={styles.navItems} id={styles.burgerNavItems}>
           <a href="#story" onClick={() => setIsNavOpen(false)}>Our Story</a>
           <a href="#areas" onClick={() => setIsNavOpen(false)}>Areas Served</a>
-          <a href="#contact" onClick={() => setIsNavOpen(false)}>Contact</a>
+          <a href="#contact" onClick={() => {
+            setIsNavOpen(false);
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+          }}>Contact</a>
         </div>
       )}
 
